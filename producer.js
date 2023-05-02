@@ -19,7 +19,6 @@ const initKafka = async () => {
 };
 
 app.post("/events/storage", async (req, res) => {
-  console.log(req.body);
   await producer.send({
     topic: "apc-storage",
     messages: [
@@ -37,7 +36,6 @@ app.post("/events/storage", async (req, res) => {
 });
 
 app.post("/events/item", async (req, res) => {
-  console.log(req.body);
   await producer.send({
     topic: "apc-item",
     messages: [
