@@ -32,6 +32,7 @@ app.post("/events/storage", async (req, res) => {
       },
     ],
   });
+  console.log(JSON.stringify(req.body));
   res.send("successfully stored event !!" + "\n");
 });
 
@@ -58,6 +59,7 @@ app.post("/events/item", async (req, res) => {
       },
     ],
   });
+  console.log(JSON.stringify(req.body));
   res.send("successfully stored event !!" + "\n");
 });
 
